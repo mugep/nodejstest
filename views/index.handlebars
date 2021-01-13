@@ -1,0 +1,26 @@
+<h1>List User</h1>
+<div class="text-right">
+    <form action="/search" class="search-form">
+        <label for="nama">Nama</label>
+        <input type="search" name="term">
+        <input type="submit" value="Search">
+    </form>
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th data-column="nama" data-order="desc">NAMA</th>
+            <th data-column="email" data-order="desc">EMAIL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each datas }}
+        <tr>
+            <td>{{dataValues.nama}}</td>
+            <td>{{dataValues.email}}</td>
+            {{/each}}
+    </tbody>
+</table>
+<div class="text-right">
+    <a href="/add" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">ADD</a>
+</div>
